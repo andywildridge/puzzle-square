@@ -1,17 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Stage :shapes="shapes" :pegs="pegs" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Stage from "./components/Stage.vue";
+import getPegs from "./utils/dice";
+import shapes from "./utils/shapesDefns";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Stage,
+  },
+  data() {
+    return {
+      pegs: getPegs().map((peg) => ({ x: peg.x + 2, y: peg.y + 2 })),
+      shapes,
+    };
+  },
+};
 </script>
 
 <style>
@@ -21,6 +28,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
