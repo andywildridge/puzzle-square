@@ -33,7 +33,8 @@
   <div v-if="completed">Completed!</div>
   <p v-if="!completed" class="info">
     Drag the shapes into posiotion to fill the grid. Drag the edge of a shape to
-    rotate, double click to filp.
+    rotate, double click to filp. <a href="https://www.happypuzzle.co.uk/30cubed/genius-square
+" target="_blank">(Based on the Genius Square)</a>
   </p>
 </template>
 
@@ -222,5 +223,7 @@ export default {
 .info {
   max-width: 400px;
   margin: auto;
+  position: relative;
+  z-index: 99;
 }
 </style>

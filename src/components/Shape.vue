@@ -1,10 +1,10 @@
 <template>
   <div
     ref="shape"
-    @mousedown="mousedown"
-    @mousemove="mousemove"
+    @mousedown.prevent="mousedown"
+    @mousemove.prevent="mousemove"
     @mouseout="mouseout"
-    @dblclick="dblclick"
+    @dblclick.prevent="dblclick"
     class="shape"
   >
     <svg width="100%" :viewBox="viewbox">
