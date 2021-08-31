@@ -1,5 +1,7 @@
 # puzzle-square
 
+puzzle based on 'the Genius Square' board game https://www.happypuzzle.co.uk/30cubed/genius-square
+
 ## Project setup
 ```
 npm install
@@ -14,11 +16,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
